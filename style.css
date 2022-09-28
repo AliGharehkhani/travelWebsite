@@ -9,8 +9,8 @@ html {
   font-size: 62.5%;
 }
 
-body{
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -34,52 +34,57 @@ h4,
 h5 {
   font-size: 2.8rem;
 }
-a{
-    color: white;
-    text-decoration: none;
+a {
+  color: white;
+  text-decoration: none;
 }
-button{
+button {
   padding: 2rem 6rem;
   background: #4c6e97;
   border: none;
   color: white;
   font-size: 1.8rem;
   cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+button:hover {
+  background: #2b3f56;
 }
 
 /* Nav section with HEAD */
 
-.main-head{
-    background: #131c27 ;
-    color: white;
+.main-head {
+  background: #203652;
+  color: white;
 }
 
-nav{
-    display: flex;
-    min-height: 10vh;
-    padding: 2rem;
-    width: 90%;
-    margin: auto;
-    align-items: center;
-    flex-wrap: wrap;
+nav {
+  display: flex;
+  min-height: 10vh;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
 }
-nav ul{
-    display: flex;
-    flex: 1 1 40rem;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-}
-
-#logo{
-    flex: 2 1 40rem;
-    font-family: 'Pattaya', sans-serif;
-    font-weight: 400;
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
 }
 
-.hero{
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: 400;
+}
+
+.hero {
   min-height: 90vh;
-  background: linear-gradient(rgb(0,0,0, 0.4), transparent),url("/img/pexels-tom-briskey-12422189.jpg");
+  background: linear-gradient(rgb(0, 0, 0, 0.4), transparent),
+    url("/img/pexels-tom-briskey-12422189.jpg");
   background-position: center;
   background-size: cover;
   color: white;
@@ -90,18 +95,88 @@ nav ul{
   text-align: center;
 }
 
-.hero h3{
-  padding:5rem ;
+.hero h3 {
+  padding: 5rem;
 }
 
-@media screen and (max-width: 932px){
-  html{
+/* LOCATIONS SECTION */
+
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgb(0, 0, 0, 0.6), transparent),
+    url("/img/new-york-page.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+
+.locations-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+}
+
+.locations-head h3 {
+  padding: 4rem 0rem;
+  color: #663b34;
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 50%;
+  height: 60%;
+  pointer-events: none;
+}
+
+.moving-cloud-1 {
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+.moving-cloud-2 {
+  top: 20%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* Media Query */
+@media screen and (max-width: 932px) {
+  html {
     font-size: 45%;
   }
-  nav{
+  nav {
     text-align: center;
   }
-  #logo{
+  #logo {
     padding: 2.5rem;
+  }
+  .moving-cloud-1 {
+    z-index: -1;
+  }
+  .moving-cloud-1 {
+    z-index: -2;
+  }
+  .locations-head h3{
+    background: rgba(19, 28, 39, 0.9);
+    color: white;
   }
 }
