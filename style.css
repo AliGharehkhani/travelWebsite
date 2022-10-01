@@ -56,6 +56,9 @@ button:hover {
 .main-head {
   background: #203652;
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 nav {
@@ -66,6 +69,7 @@ nav {
   margin: auto;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
 nav ul {
   display: flex;
@@ -251,7 +255,32 @@ nav ul {
   padding: 1rem 3rem;
 }
 
+footer{
+  color: white;
+  background: rgba(19, 28, 39, 1);
+}
 
+.footer-wrapper{
+  display: flex;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height:10vh ;
+  flex-wrap: wrap;
+}
+
+footer h5{
+  flex: 1 1 40rem;
+}
+
+footer ul{
+  display: flex;
+  list-style: none;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* Media Query */
 @media screen and (max-width: 932px) {
@@ -273,5 +302,14 @@ nav ul {
   .locations-head h3 {
     background: rgba(19, 28, 39, 0.9);
     color: white;
+  }
+  .form-wrapper{
+    width: 100%;
+  }
+  footer{
+    text-align: center;
+  }
+  footer h5{
+    padding-bottom: 3rem;
   }
 }
