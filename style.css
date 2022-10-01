@@ -158,6 +158,101 @@ nav ul {
   }
 }
 
+/* Benefits section */
+
+.benefits-head {
+  background: #343c44;
+  padding: 3rem;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.benefits-head h3 {
+  padding: 1rem;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  text-align: center;
+  flex: 1 1 30rem;
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cards img {
+  max-width: 15%;
+  margin: 2rem;
+}
+
+.card h4,
+.card p {
+  padding: 1rem;
+}
+
+.card-icon {
+  background: #4c6e97;
+}
+
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("/img/contact-mountain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wrapper {
+  background: rgba(19, 28, 39, 0.8);
+  width: 60%;
+  color: white;
+  border-radius: 20px;
+}
+
+.name-form,
+.email-form {
+  padding: 3rem;
+  padding: 3rem;
+  text-align: center;
+}
+.form-wrapper label{
+  margin: 0rem 3rem;
+}
+
+.form-wrapper button{
+  width: 100%;
+  padding: 2rem;
+  margin-top: 8rem;
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+}
+
+.form-head {
+  text-align: center;
+  padding: 4rem;
+}
+
+.form-wrapper input{
+  padding: 1rem 3rem;
+}
+
+
+
 /* Media Query */
 @media screen and (max-width: 932px) {
   html {
@@ -175,7 +270,7 @@ nav ul {
   .moving-cloud-1 {
     z-index: -2;
   }
-  .locations-head h3{
+  .locations-head h3 {
     background: rgba(19, 28, 39, 0.9);
     color: white;
   }
