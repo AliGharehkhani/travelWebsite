@@ -162,6 +162,13 @@ nav ul {
   }
 }
 
+button:focus{
+  background: #203652;
+  outline: solid;
+  border: none;
+  outline-color: white;
+}
+
 /* Benefits section */
 
 .benefits-head {
@@ -204,6 +211,7 @@ nav ul {
 .card h4,
 .card p {
   padding: 1rem;
+  line-height: 3rem;
 }
 
 .card-icon {
